@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include 'cdnlines.html' %}
+</head>
+<body>
+<style>
+    .container-fluid{
+        margin-top: 20px;
+    }
+    .card{
+        border-radius: 25px  25px 25px 25px;
+    }
+
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h4>Total Orders</h4>
+                </div>
+                <div class="card-body">
+
+                    <center><h1>{{ Total_orders }}</h1></center>
+
+                </div>
+
+            </div>
+        </div>
+
+
+         <div class="col-md">
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <h4>Pending Orders</h4>
+                </div>
+                <div class="card-body">
+
+                    <center><h1>{{ pending_orders }}</h1></center>
+
+                </div>
+
+            </div>
+        </div>
+         <div class="col-md">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4>Delivered Orders</h4>
+                </div>
+                <div class="card-body">
+
+                    <center><h1>{{ delivered_orders }}</h1></center>
+
+                </div>
+
+            </div>
+        </div>
+         <div class="col-md">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    <h4>Out For Delivery</h4>
+                </div>
+                <div class="card-body">
+
+                    <center><h1>{{ out_for_delivery }}</h1></center>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

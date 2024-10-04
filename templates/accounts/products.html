@@ -1,0 +1,56 @@
+{% extends "accounts/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>products</title>
+</head>
+<body>
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="card">
+                <div class="card-header bg-success">
+                    <center><h2>All Available Products</h2></center>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered text-center">
+                        <thead class="bg-warning">
+                            <tr>
+                                <th>S.No</th>
+                                <th>Product Category</th>
+                                <th>Product Name</th>
+                                <th>Product Description</th>
+                                <th>Price</th>
+                                <th>Order date</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-dark text-white">
+                            {% for i in product %}
+                                <tr>
+                                    <td>{{ i.id }}</td>
+                                    <td>{{ i.category }}</td>
+                                    <td>{{ i.name }}</td>
+                                    <td>{{ i.description }}</td>
+                                    <td>{{ i.price }}</td>
+                                    <td>{{ i.Order_date }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
+</body>
+</html>

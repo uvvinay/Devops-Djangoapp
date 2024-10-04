@@ -1,0 +1,59 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+</head>
+<body>
+
+<div class="hero">
+    <div class="navbar">
+        <img src="{% static 'images/logo.png' %}" class="logo" >
+        <button type="button"><a href="{% url 'register' %}">SignUp</a></button>
+    </div>
+    <div class="content">
+        <small>Welocme to </small>
+        <h1>Django <br>Tutorials</h1>
+    </div>
+    <div class="login-box">
+        <h1>Login</h1>
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username">
+        </div>
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="password">
+        </div>
+        <input class="btn btn-success" type="submit" value="Login">
+
+
+
+
+    </div>
+    <div class="side-bar">
+        <div class="social-links">
+            <img src="{% static 'images/fb.png' %}">
+            <img src="{% static 'images/ig.png' %}">
+            <img src="{% static 'images/tw.png' %}">
+
+        </div>
+    </div>
+    <div class="bubbles">
+        <img src="{% static 'images/bubble.png' %}">
+        <img src="{% static 'images/bubble.png' %}">
+        <img src="{% static 'images/bubble.png' %}">
+        <img src="{% static 'images/bubble.png' %}">
+        <img src="{% static 'images/bubble.png' %}">
+        <img src="{% static 'images/bubble.png' %}">
+        <img src="{% static 'images/bubble.png' %}">
+
+    </div>
+</div>
+
+
+</body>
+</html>

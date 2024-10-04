@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">VINAY KUMAR</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url "home" %}">Dash Board </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url "PRODUCTS" %}">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url "ORDERS" %}">Orders</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url "user" %}">Settings</a>
+      </li>
+
+
+    </ul>
+  </div>
+<span id="1">Hello {{ request.user }}</span>
+<span id="logout" style="padding-left: 20px"><a href="{% url 'logout' %}"> Logout</a></span>
+</nav>
+{% endblock %}
+</body>
+</html>
