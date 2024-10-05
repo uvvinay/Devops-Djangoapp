@@ -9,7 +9,7 @@ from .decerator import unathenicated_user
 
 # Create your views here.
 
-#@login_required(login_url='login')
+@login_required(login_url='login')
 #@allowed_users(allowed_role=[])
 def home(request):
     customers= Customer.objects.all()
@@ -31,7 +31,7 @@ def home(request):
     }
     return render(request, 'accounts/dashboard.html',contex)
 
-#@login_required(login_url='login')
+@login_required(login_url='login')
 #@allowed_users(allowed_role=[])
 def PRODUCTS(request):
     product=Products.objects.all()
@@ -41,7 +41,7 @@ def PRODUCTS(request):
     return render(request, 'accounts/products.html',contex)
 
 
-#@login_required(login_url='login')
+@login_required(login_url='login')
 #@allowed_users(allowed_role=[])
 def ORDERS(request):
     orders=Orders.objects.all()
@@ -51,8 +51,8 @@ def ORDERS(request):
 
     return render(request, 'accounts/orders.html',contex)
 
-#@login_required(login_url='login')
-#@allowed_users(allowed_role=[])
+@login_required(login_url='login')
+#@allowed_users(allowed_role=['STAFF'])
 def customer(request,pk):
     customer = Customer.objects.get(id=pk)
     orders=customer.orders_set.all()
@@ -108,7 +108,7 @@ def LOGIN(request):
 def logoutuser(request):
     logout(request)
     return redirect('login')
-#@login_required(login_url='login')
+@login_required(login_url='login')
 def userview(request):
     user=request.user
     form=customeruserform(instance=user)
