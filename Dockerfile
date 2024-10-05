@@ -1,6 +1,6 @@
 #use official python image from docker
 
-FROM python:3.12.3
+FROM python:latest
 
 WORKDIR /CRMPOJECT
 
